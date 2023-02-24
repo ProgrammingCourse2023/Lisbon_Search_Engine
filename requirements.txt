@@ -1,0 +1,12 @@
+geopandas
+pandas
+ipykernel
+requests
+osmnx>=1.3
+sqlalchemy<=2.0
+psycopg2
+GeoAlchemy2
+shapely
+numpy
+flask
+Flask-SQLAlchemy
