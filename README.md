@@ -41,9 +41,9 @@ After download the data, the script does some transformations on the table, for 
 
 About the geometry, the function applied on polygon classes (explain in the "Data" chapter) were filtered only to maintain polygon geometry, while the point classes were divided between point and polygon to transform the polygon into points and insert it again to the points from OSM. It was decided because it could be difficult to create a polygon from a simple point to represent well the facilities on the terrain, but it is possible to transform a polygon into a point and maintain the original information from the table. ----
 
-The extraction and transformation steps were put inside two tools developed in our script: "ETL_facility_polygon" and "ETL_facility_point"
+The extraction and transformation steps were put inside two functions developed in our script: "ETL_facility_polygon" and "ETL_facility_point"
 
-The load to the database created is not inside the function developed, to allow the user a customization if necessary to change the final database. The load function was done using to_postgis tool, from Geopandas package, that allow to insert data using a SQL connection in a table and with the geometry. The code below shows how the tool work.
+The data upload to the created database is not inside the function developed to allow the user a customization, if is necessary to change the final database. The loading function was done using to_postgis tool, from Geopandas package, that allow to insert data using a SQL connection in a table and with the geometry. The code below shows how the tool work.
 
         Geodataframe.to_postgis("table name",connection,if_exists='append', index=False, dtype={'column with geometry': Geometry(geometry_type='geometry choose', srid= SRID number)})
         where:
