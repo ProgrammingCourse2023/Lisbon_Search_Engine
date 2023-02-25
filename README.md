@@ -9,6 +9,8 @@ The development of this tool was possible due to the creation of the ETL  to con
 
 The tool allows to the user select specific facilities located in the city of Lisbon and display their main information such as name, address, email, phone, website, among others----
 
+https://github.com/ProgrammingCourse2023/Lisbon_Search_Engine/assets/Captura%20de%20pantalla%202023-02-25%20120535.jpg
+
 
 
 
