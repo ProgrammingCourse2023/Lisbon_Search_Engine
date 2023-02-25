@@ -10,10 +10,8 @@ The development of this tool was possible due to the creation of the ETL  to con
 The tool allows to the user select specific facilities located in the city of Lisbon and display their main information such as name, address, email, phone, website, among others----
 
 
-
-
-
-
+![Aquí la descripción de la imagen por si no carga]
+(https://raw.githubusercontent.com/ProgrammingCourse2023/Lisbon_Search_Engine/main/Captura%20de%20pantalla%202023-02-25%20120535.jpg)
 
 If it is necessary, you can create a lisbon_engine environment in Anaconda to run this application, running the code below:
 
