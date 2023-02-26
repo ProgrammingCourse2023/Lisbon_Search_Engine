@@ -37,9 +37,6 @@ The data upload to the created database is not inside the function developed to 
         
         example_polygon.to_postgis("facilities_polygon",LINK_DB,if_exists='append', index=False, dtype={'geometry': Geometry(geometry_type='POLYGON', srid= 4326)})
 
-
-
-
 # API
 
 In the API part some functions were develop to the user get:
@@ -58,6 +55,23 @@ In the API part some functions were develop to the user get:
 After it, you need to install all the packages necessary for this application running the code below:
 
     conda install --file requirements.txt --channel conda-forge
+     
+  
+     geopandas
+     pandas
+     ipykernel
+     requests
+     osmnx>=1.3
+     sqlalchemy<=2.0
+     psycopg2
+     GeoAlchemy2
+     shapely
+     numpy
+     flask
+     Flask-SQLAlchemy
+     
+                
+
 
 
 
