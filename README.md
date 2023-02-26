@@ -1,6 +1,3 @@
-![Captura de pantalla 2023-02-22 153415](https://user-images.githubusercontent.com/126191930/221417611-623cca0e-6765-4466-b9d4-10a4a3508ee8.jpg)
-
-
 # Lisbon Search Engine
 
 This repository presents the final project of programming seminar 2023 in master of Geospatial technologies.
@@ -8,20 +5,6 @@ As part of the advance of geolocalization, the identification and display positi
 The development of this tool was possible due to the creation of the ETL to do the extraction, transformation and load of public data into the database of the project, so connecting it to the API according to the request done by the users using the front end of the tool.
 
 The objective of the tool is allow to the user select specific facilities located in the city of Lisbon and display their main information such as name, address, email, phone, website, among others.----
-
-If it is necessary, you can create a lisbon_engine environment in Anaconda to run this application, running the code below:
-
-    conda create -n lisbon_engine
-
-    conda activate lisbon_engine
-
-After it, you need to install all the packages necessary for this application running the code below:
-
-    conda install --file requirements.txt --channel conda-forge
-  
-
-Considering database used in this project, in the folder "database" are located 2 files to run it into PGAdmin considering all the configurations necessary.
-
 
 # Data
 
@@ -64,7 +47,17 @@ In the API part some functions were develop to the user get:
 - a specific information in each table using an ID number ("/facilities_point/<id>" and "/facilities_polygon/<id>");
 - a search connected with the front-end to show the results in a map 
 
+# How can I run Lisbon Search Engine?
+    
+  If it is necessary, you can create a lisbon_engine environment in Anaconda to run this application, running the code below:
 
+    conda create -n lisbon_engine
+
+    conda activate lisbon_engine
+
+After it, you need to install all the packages necessary for this application running the code below:
+
+    conda install --file requirements.txt --channel conda-forge
 
 
 
