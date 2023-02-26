@@ -26,6 +26,7 @@ DB_CONFIG = {
 # Create a flask application
 
 app = Flask(__name__,template_folder = 'docs')
+CORS(app)
 
 # Set the database connection URI in the app configuration
 
