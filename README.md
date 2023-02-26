@@ -87,3 +87,7 @@ After it, you need to install all the packages necessary for this application ru
           
  # FRONT END
 
+In the front end has been developed search functions to retrieve the data stored in the database to show the information using pop-ups of each class. The video below shows an example, searching for a type of facility and displaying the information about it in Lisbon.
+
+https://user-images.githubusercontent.com/126191930/221423739-3abeb051-279f-4e75-81b4-09b11908cf68.mp4
+
