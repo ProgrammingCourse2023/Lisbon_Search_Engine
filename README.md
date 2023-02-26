@@ -21,10 +21,7 @@ The database project "programming_ project" was created through the use of PGadm
 The extraction of the information from Open Street Map was possible using the "geometries_from_place()" inside the OSM package, where "group" are the OSM main classification (amenity, building) and "values" are the facilities (hospital, library, school, etc). Also, it was setting the "location" query, which represents the name of a city, region or country. As aim of the project was defined "Lisbon" as the location query, but other places can be chosen as well. The code below shows how the OSM tool works
      
      osm.geometries_from_place("place",tags={group:values})
-     
-     
-     
-     
+      
      example = osm.geometries_from_place("Lisbon",tags={amenity:hospital})
 
 
