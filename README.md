@@ -91,8 +91,14 @@ In the front end has been developed search functions to retrieve the data stored
 
 https://user-images.githubusercontent.com/126191930/221423739-3abeb051-279f-4e75-81b4-09b11908cf68.mp4
 
+          
 The user can also search for some facility using the name of the facility, so the Lisbon Search Engine will show all registers that contain this name. The video below shows an example.
 
 https://user-images.githubusercontent.com/126191930/221424269-1a5f7bb5-a63e-43c6-89ab-7abc57a0dde2.mp4
 
-
+          
+The API also has two functions to the user get all the information about facilities stored in the database at the same time. Only need to write, after the localhost, "facilities_polygon", if the facility is stored in the polygon table, or "facilities_point" if the facility is stored in the point table. The video below shows an example of this application.----
+          
+          
+The last API functions are related to get information from the database, but instead of get all information in the same time it will get a single register, considering some id of the register. Only need to write, after the localhost, "facilities_polygon/<id>", if the facility is stored in the polygon table, or "facilities_point/<id>" if the facility is stored in the point table. The video below shows an example of this application.----
+          
