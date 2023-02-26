@@ -48,9 +48,9 @@ https://user-images.githubusercontent.com/126191930/221422672-94b57a01-3cb4-4c95
 # API
 
 In the API part some functions were develop to the user get:
+- a search connected with the front-end to show the results in a map 
 - all information from the database considering a geometry ("/facilities_point" and "/facilities_polygon");
 - a specific information in each table using an ID number ("/facilities_point/<id>" and "/facilities_polygon/<id>");
-- a search connected with the front-end to show the results in a map 
 
 # How can I run Lisbon Search Engine?
     
