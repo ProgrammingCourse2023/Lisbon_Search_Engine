@@ -91,3 +91,8 @@ In the front end has been developed search functions to retrieve the data stored
 
 https://user-images.githubusercontent.com/126191930/221423739-3abeb051-279f-4e75-81b4-09b11908cf68.mp4
 
+The user can also search for some facility using the name of the facility, so the Lisbon Search Engine will show all registers that contain this name. The video below shows an example.
+
+https://user-images.githubusercontent.com/126191930/221424269-1a5f7bb5-a63e-43c6-89ab-7abc57a0dde2.mp4
+
+
