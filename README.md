@@ -1,10 +1,12 @@
 # Lisbon Search Engine
 
-This repository presents the final project of programming seminar 2023 in master of Geospatial technologies.
+This repository presents the final project of programming seminar 2023 in Erasmus Master Program in Geospatial Technologies.
 As part of the advance of geolocalization, the identification and display position of representative places in the development of communities have meaningful importance currently, this project seeks to display facilities in the city of Lisbon through the use of the "Lisbon Search Engine".
 The development of this tool was possible due to the creation of the ETL to do the extraction, transformation and load of public data into the database of the project, so connecting it to the API according to the request done by the users using the front end of the tool.
 
 The objective of the tool is allow to the user select specific facilities located in the city of Lisbon and display their main information such as name, address, email, phone, website, among others.----
+
+The developers of this tool are: Afsanea, Mônica Sofia and Gabriel
 
 # Data
 
