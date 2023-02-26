@@ -20,6 +20,9 @@ The extraction of the information from Open Street Map was possible using the "g
      
      osm.geometries_from_place("place",tags={group:values})
      
+     
+     
+     
      example = osm.geometries_from_place("Lisbon",tags={amenity:hospital})
 
 
@@ -73,6 +76,7 @@ After it, you need to install all the packages necessary for this application ru
      The version of "sqlalchemy" must be before 2.0, because newer versions have a bug in "to_postgis" function, where the append doesn'n work. 
      
 - Creating the database in PgAdmin, the schemas and tables structure of the project you should run the SQL scripts on [database folder](https://github.com/ProgrammingCourse2023/Lisbon_Search_Engine/tree/main/DB).
+functions.py - Programming_Project - Visual Studio Code 2023-02-26 16-08-01.mp4
 - Running the [main.py](https://github.com/ProgrammingCourse2023/Lisbon_Search_Engine/blob/main/main.py) to download the data, to transform and load to the database.
 - Finally, running the [API.py](https://github.com/ProgrammingCourse2023/Lisbon_Search_Engine/blob/main/API.py) to extract the information inside the database and display in the front end.
           
