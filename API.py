@@ -25,7 +25,7 @@ DB_CONFIG = {
 
 # Create a flask application
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder = 'docs')
 
 # Set the database connection URI in the app configuration
 
