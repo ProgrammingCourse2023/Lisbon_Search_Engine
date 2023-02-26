@@ -69,6 +69,8 @@ After it, you need to install all the packages necessary for this application ru
      numpy
      flask
      Flask-SQLAlchemy
+                    
+     The version of "sqlalchemy" must be before 2.0, because newer versions have a bug in "to_postgis" function, where the append doesn'n work.                    
      
                 
 
