@@ -42,6 +42,12 @@ The data upload to the created database is not inside the function developed to 
         
         example_polygon.to_postgis("facilities_polygon",LINK_DB,if_exists='append', index=False, dtype={'geometry': Geometry(geometry_type='POLYGON', srid= 4326)})
 
+
+
+https://user-images.githubusercontent.com/126191930/221422672-94b57a01-3cb4-4c95-b105-d778de6bfeb3.mp4
+
+
+
 # API
 
 In the API part some functions were develop to the user get:
