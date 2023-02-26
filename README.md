@@ -80,5 +80,5 @@ After it, you need to install all the packages necessary for this application ru
 - Finally, running the [API.py](https://github.com/ProgrammingCourse2023/Lisbon_Search_Engine/blob/main/API.py) to extract the information inside the database and display in the front end.
           
           
- #FRONT END
+ # FRONT END
 
