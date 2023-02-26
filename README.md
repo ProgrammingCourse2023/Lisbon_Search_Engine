@@ -70,9 +70,13 @@ After it, you need to install all the packages necessary for this application ru
      flask
      Flask-SQLAlchemy
                     
-     The version of "sqlalchemy" must be before 2.0, because newer versions have a bug in "to_postgis" function, where the append doesn'n work.                    
+     The version of "sqlalchemy" must be before 2.0, because newer versions have a bug in "to_postgis" function, where the append doesn'n work. 
      
-                
+- Creating the database in PgAdmin, the schemas and tables structure of the project you should run the SQL scripts on [database folder](https://github.com/ProgrammingCourse2023/Lisbon_Search_Engine/tree/main/DB).
+- Running the [main.py](https://github.com/ProgrammingCourse2023/Lisbon_Search_Engine/blob/main/main.py) to download the data, to transform and load to the database.
+- To run the API [API.py] (https://github.com/ProgrammingCourse2023/Lisbon_Search_Engine/blob/main/API.py) to extract the information inside the database and display in the front end.
+     
+             
 
 
 
