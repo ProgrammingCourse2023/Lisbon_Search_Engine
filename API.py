@@ -16,7 +16,7 @@ DB_CONFIG = {
     "database": "programming_project",
     "username": "postgres",
     "password": "postgres",
-    "host": "34.79.229.205",
+    "host": "localhost",
     "port": "5432"}
 
 # Notice, normally this is set with environment variables on the server
@@ -26,7 +26,6 @@ DB_CONFIG = {
 # Create a flask application
 
 app = Flask(__name__,template_folder = 'docs')
-CORS(app)
 
 # Set the database connection URI in the app configuration
 
@@ -89,7 +88,7 @@ conn = psycopg2.connect(dbname= "programming_project",
     user="postgres",
     password= "postgres",
     host= "localhost",
-    port= "5433")
+    port= "5432")
 
 @app.get('/search/<keyword>')
 def search(keyword):
