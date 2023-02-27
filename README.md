@@ -103,9 +103,10 @@ The API also has two functions to the user get all the information about facilit
           
           
 The last API functions are related to get information from the database, but instead of get all information in the same time it will get a single register, considering some id of the register. Only need to write, after the localhost, "facilities_polygon/<id>", if the facility is stored in the polygon table, or "facilities_point/<id>" if the facility is stored in the point table. The video below shows an example of this application.----
-          
-Authors
+# Limitations and next steps
+     
+# Authors
 
- Afsaneh Rasoulian  
- Gabriel Duarte
- Mónica Sofía Roncancio
+ Afsaneh Rasoulian Bachelor´s degree in Surveying Engineering
+ Gabriel Duarte Bachelos´s degree in Geography
+ Mónica Sofía Roncancio Bachelos´s degree in Surveying Engeneering
