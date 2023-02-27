@@ -17,7 +17,8 @@ The facilities chosen were divided into two categories, depending of which geome
 
 
 # Database
-The database project "programming_ project" was created through the use of PGadmin and we used the extension PostGIS to work with the geometries inside the tables. The tables and views used on ETL and API scripts were created using SQL scripts that are inside the [database folder](https://github.com/ProgrammingCourse2023/Lisbon_Search_Engine/tree/main/DB) to run it in sequencial order. The database has one table and one view per geometry. For example, "facilities_point" as the table and "facilities_point_geojson" as the view
+The database project "programming_ project" was created through the use of PGadmin and we used the extension PostGIS to work with the geometries inside the tables.
+The tables and views used on ETL and API scripts were created using SQL scripts that are inside the [database folder](https://github.com/ProgrammingCourse2023/Lisbon_Search_Engine/tree/main/DB) to run it in sequencial order. The database has one table and one view per geometry. For example, "facilities_point" as the table and "facilities_point_geojson" as the view
 
 # ETL
 The extraction of the information from Open Street Map was possible using the "geometries_from_place()" inside the OSM package, where "group" are the OSM main classification (amenity, building) and "values" are the facilities (hospital, library, school, etc). Also, it was setting the "location" query, which represents the name of a city, region or country. As aim of the project was defined "Lisbon" as the location query, but other places can be chosen as well. The code below shows how the OSM tool works
@@ -106,10 +107,10 @@ The last API functions are related to get information from the database, but ins
           
 # Limitations and next steps
           
-  The tool require to the next step that every facility has more than one geometry in different scales to have a better visualization.        
-  Displaying the results of Lisbon Search Engine It will be more accurate if it is done from a official web page.        
-  The source of information was limited. it will useful for the project include more informetion sources.
-  The next tool version will seek the implementation of more information about Lisbon and increase the number of OSM tags to achieve a good range of detail.
+  - The tool require to the next step that every facility has more than one geometry in different scales to have a better visualization.        
+  - Displaying the results of Lisbon Search Engine It will be more accurate if it is done from a official web page.        
+  - The source of information was limited. it will useful for the project include more informetion sources.
+  - The next tool version will seek the implementation of more information about Lisbon and increase the number of OSM tags to achieve a good range of detail.
           
      
 # Authors
