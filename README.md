@@ -49,7 +49,7 @@ https://user-images.githubusercontent.com/126191930/221422672-94b57a01-3cb4-4c95
 
 # API
 
-  #Setting Up the Database
+  # Setting Up the Database
  
  First, we need to create a database for our API. The database used in my API code is PostgreSQL. The connection information for the database is specified in a dictionary called #DB_CONFIG.We will be using PostgreSQL for this example, but you can use any database of your choice. 
  
@@ -67,7 +67,7 @@ https://user-images.githubusercontent.com/126191930/221422672-94b57a01-3cb4-4c95
   
   ![2](https://user-images.githubusercontent.com/126191930/221657919-1b78d8ae-be8c-44b3-9c20-1b084c3e776e.png)
 
- #Searching for Facilities with GET Requests
+ # Searching for Facilities with GET Requests
  
  The application has two tables for facilities represented by points and polygons. Each table has different columns to store the properties of the facilities, such as name, address, phone number, email, and website. The tables also contain a column for storing the geographic data in the GeoJSON format.
  
@@ -76,7 +76,7 @@ https://user-images.githubusercontent.com/126191930/221422672-94b57a01-3cb4-4c95
 
               
 
-  #Creating GeoJSON Features for Facilities
+  # Creating GeoJSON Features for Facilities
  
  The API code has two SQLAlchemy models: facilities_polygon and facilities_point. These models represent tables in the PostgreSQL database that store facilities data.
  The search function in your API code uses the psycopg2 library to execute SQL queries against the PostgreSQL database to search for facilities. The function accepts a keyword parameter, which is the search term entered by the user. The function first searches for facilities that match the facility field in the facilities_polygon table. If no matches are found, the function searches for facilities that match the name field in the facilities_polygon table. If no matches are found, the function searches for facilities that match the facility field in the facilities_point table. Finally, if no matches are found, the function searches for facilities that match the name field in the facilities_point table.
@@ -88,7 +88,7 @@ so we have two main function:
      
 ![4](https://user-images.githubusercontent.com/126191930/221658483-cc094952-55b5-456c-9a39-d924d204458b.png)
 
-   #Returning JSON Response to User
+   # Returning JSON Response to User
  
  The results are returned in a GeoJSON format with the properties of the facilities such as name, address, phone number, email, and website. If the facility is represented by a point, the opening hours are also returned.
      
