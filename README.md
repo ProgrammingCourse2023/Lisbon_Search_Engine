@@ -59,7 +59,7 @@ https://user-images.githubusercontent.com/126191930/221422672-94b57a01-3cb4-4c95
  First, we need to create a database for our API. The database used in my API code is PostgreSQL. The connection information for the database is specified in a dictionary called #DB_CONFIG.We will be using PostgreSQL for this example, but you can use any database of your choice. 
  
 
-![final_change - Copy](https://user-images.githubusercontent.com/126191930/221654799-e58c3735-b435-4d1c-b597-2484ed83a13c.png)
+                           ![final_change - Copy](https://user-images.githubusercontent.com/126191930/221654799-e58c3735-b435-4d1c-b597-2484ed83a13c.png)
      
  # Create a flask application
  
