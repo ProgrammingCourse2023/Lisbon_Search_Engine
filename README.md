@@ -1,3 +1,7 @@
+![profile](https://user-images.githubusercontent.com/126191930/221664110-3627a8a1-e1ca-4f4f-bd47-c14f1dfaecc5.jpg)
+
+
+
 # Lisbon Search Engine
 
 This repository presents the final project of programming seminar 2023 in Erasmus Master Program in Geospatial Technologies.
