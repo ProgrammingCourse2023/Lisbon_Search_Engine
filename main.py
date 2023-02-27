@@ -9,7 +9,7 @@ import sqlalchemy as sql
 import numpy 
 import shapely
 from geoalchemy2 import Geometry
-import functions
+import ETL.functions as functions
 
 """
 Constants used to run this code
