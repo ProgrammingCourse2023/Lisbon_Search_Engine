@@ -133,21 +133,18 @@ The user can also search for some facility using the name of the facility, so th
 https://user-images.githubusercontent.com/126191930/221424269-1a5f7bb5-a63e-43c6-89ab-7abc57a0dde2.mp4
 
           
-The API also has two functions to the user get all the information about facilities stored in the database at the same time. Only need to write, after the localhost, "facilities_polygon", if the facility is stored in the polygon table, or "facilities_point" if the facility is stored in the point table. The video below shows an example of this application.----
-
-
-    
-
+The API also has two functions to the user get all the information about facilities stored in the database at the same time. Only need to write, after the localhost, "facilities_polygon", if the facility is stored in the polygon table, or "facilities_point" if the facility is stored in the point table. The video below shows an example of this application.
+          
 https://user-images.githubusercontent.com/126191930/221660981-be63ade2-a073-47a3-8e71-e290f33c2ed5.mp4
 
       
-The last API functions are related to get information from the database, but instead of get all information in the same time it will get a single register, considering some id of the register. Only need to write, after the localhost, "facilities_polygon/<id>", if the facility is stored in the polygon table, or "facilities_point/<id>" if the facility is stored in the point table. The video below shows an example of this application.----
+
+          
+The last API functions are related to get information from the database, but instead of get all information in the same time it will get a single register, considering some id of the register. Only need to write, after the localhost, "facilities_polygon/<id>", if the facility is stored in the polygon table, or "facilities_point/<id>" if the facility is stored in the point table. The video below shows an example of this application.
  
 
 https://user-images.githubusercontent.com/126191930/221661715-7df43a10-d5f3-4937-befc-02830b41c5fa.mp4
 
-
-       
           
           
 Authors
