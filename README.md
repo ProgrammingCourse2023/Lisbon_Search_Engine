@@ -103,7 +103,14 @@ The API also has two functions to the user get all the information about facilit
           
           
 The last API functions are related to get information from the database, but instead of get all information in the same time it will get a single register, considering some id of the register. Only need to write, after the localhost, "facilities_polygon/<id>", if the facility is stored in the polygon table, or "facilities_point/<id>" if the facility is stored in the point table. The video below shows an example of this application.----
+          
 # Limitations and next steps
+          
+  The tool require to the next step that every facility has more than one geometry in different scales to have a better visualization.        
+  Displaying the results of Lisbon Search Engine It will be more accurate if it is done from a official web page.        
+  The source of information was limited. it will useful for the project include more informetion sources.
+  The next tool version will seek the implementation of more information about Lisbon and increase the number of OSM tags to achieve a good range of detail.
+          
      
 # Authors
 
