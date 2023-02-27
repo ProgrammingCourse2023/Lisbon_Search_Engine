@@ -53,66 +53,46 @@ https://user-images.githubusercontent.com/126191930/221422672-94b57a01-3cb4-4c95
  
  First, we need to create a database for our API. The database used in my API code is PostgreSQL. The connection information for the database is specified in a dictionary called #DB_CONFIG.We will be using PostgreSQL for this example, but you can use any database of your choice. 
  
-      DB_CONFIG = {
-    "database": "programming_project",
-    "username": "postgres",
-    "password": "postgres",
-    "host": "localhost",
-    "port": "5433"}
-    
-    
-           ![final_change - Copy](https://user-images.githubusercontent.com/126191930/221654799-e58c3735-b435-4d1c-b597-2484ed83a13c.png)
 
-           
-           
- #Building the API with Flask
+![final_change - Copy](https://user-images.githubusercontent.com/126191930/221654799-e58c3735-b435-4d1c-b597-2484ed83a13c.png)
+     
+ # Create a flask application
  
- Our API code is built using Flask, a web framework for Python that allows developers to build web applications quickly and easily.
+  Our API code is built using Flask, a web framework for Python that allows developers to build web applications quickly and easily.
  this Flask web application searches information from two tables in a PostgreSQL database. The database contains information on different types of facilities such as shops, schools, hospitals, and banks etc. The application searches for information based on the keyword that is provided in the URL endpoint.as a summery this API code is a RESTful API that accepts GET requests to search for facilities by keyword.
  
+     app = Flask(__name__,template_folder = 'docs')
+ 
+  # Create object to control SQLAlchemy from the Flask app   or  Defining SQLAlchemy Models
+  
+  ![2](https://user-images.githubusercontent.com/126191930/221657919-1b78d8ae-be8c-44b3-9c20-1b084c3e776e.png)
 
- 
- # Create a flask application
- ......
- 
- #Connecting to PostgreSQL Database
- ....
- 
  #Searching for Facilities with GET Requests
  
  The application has two tables for facilities represented by points and polygons. Each table has different columns to store the properties of the facilities, such as name, address, phone number, email, and website. The tables also contain a column for storing the geographic data in the GeoJSON format.
  
- # Create object to control SQLAlchemy from the Flask app   or  Defining SQLAlchemy Models
- .....
- 
- #Searching for Facilities with GET Requests  or #Executing SQL Queries with psycopg2
- 
  The search function is defined with a route /search/<keyword> that takes a keyword as a parameter. It first tries to search for information based on the category of the facility in the polygon table. If no results are found, it searches for information based on the name of the facility in the polygon table. If still no results are found, it searches for information based on the category of the facility in the point table. Finally, if no results are found, it searches for information based on the name of the facility in the point table.
- 
-           conn = psycopg2.connect(dbname=DB_CONFIG['database'],
-              user=DB_CONFIG['username'],
-              password=DB_CONFIG['password'],
-              host=DB_CONFIG['host'],
-              port=DB_CONFIG['port'])
+     
+
               
-              
-#Creating GeoJSON Features for Facilities
+
+  #Creating GeoJSON Features for Facilities
  
  The API code has two SQLAlchemy models: facilities_polygon and facilities_point. These models represent tables in the PostgreSQL database that store facilities data.
- 
  The search function in your API code uses the psycopg2 library to execute SQL queries against the PostgreSQL database to search for facilities. The function accepts a keyword parameter, which is the search term entered by the user. The function first searches for facilities that match the facility field in the facilities_polygon table. If no matches are found, the function searches for facilities that match the name field in the facilities_polygon table. If no matches are found, the function searches for facilities that match the facility field in the facilities_point table. Finally, if no matches are found, the function searches for facilities that match the name field in the facilities_point table.
-  
  If a match is found for a facility, the function creates a GeoJSON Feature for that facility and adds it to a GeoJSON FeatureCollection. The GeoJSON Feature contains information about the facility, such as its name, address, phone number, email, and website. 
 Once the GeoJSON FeatureCollection is complete, the function returns it as a JSON response to the user.
+so we have two main function:
+- all information from the database considering a geometry ("/facilities_point" and "/facilities_polygon");
+- a specific information in each table using an ID number ("/facilities_point/<id>" and "/facilities_polygon/<id>");
+     
+![4](https://user-images.githubusercontent.com/126191930/221658483-cc094952-55b5-456c-9a39-d924d204458b.png)
 
    #Returning JSON Response to User
  
  The results are returned in a GeoJSON format with the properties of the facilities such as name, address, phone number, email, and website. If the facility is represented by a point, the opening hours are also returned.
-
-In the API part some functions were develop to the user get:
-- a search connected with the front-end to show the results in a map 
-- all information from the database considering a geometry ("/facilities_point" and "/facilities_polygon");
-- a specific information in each table using an ID number ("/facilities_point/<id>" and "/facilities_polygon/<id>");
+     
+    ![5](https://user-images.githubusercontent.com/126191930/221659087-67c73ff7-a229-4643-9a63-7f468b38fa0f.png)
 
 # How can I run Lisbon Search Engine?
     
@@ -160,7 +140,7 @@ https://user-images.githubusercontent.com/126191930/221424269-1a5f7bb5-a63e-43c6
 
           
 The API also has two functions to the user get all the information about facilities stored in the database at the same time. Only need to write, after the localhost, "facilities_polygon", if the facility is stored in the polygon table, or "facilities_point" if the facility is stored in the point table. The video below shows an example of this application.----
-          
+
           
 The last API functions are related to get information from the database, but instead of get all information in the same time it will get a single register, considering some id of the register. Only need to write, after the localhost, "facilities_polygon/<id>", if the facility is stored in the polygon table, or "facilities_point/<id>" if the facility is stored in the point table. The video below shows an example of this application.----
           
