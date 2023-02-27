@@ -16,13 +16,13 @@ DB_CONFIG = {
     "username": "postgres",
     "password": "postgres",
     "host": "localhost",
-    "port": "5433"}
+    "port": "5432"}
 
 conn = psycopg2.connect(dbname= "programming_project",
     user="postgres",
     password= "postgres",
     host= "localhost",
-    port= "5433")
+    port= "5432")
 
 
 
