@@ -62,19 +62,13 @@ https://user-images.githubusercontent.com/126191930/221422672-94b57a01-3cb4-4c95
  this Flask web application searches information from two tables in a PostgreSQL database. The database contains information on different types of facilities such as shops, schools, hospitals, and banks etc. The application searches for information based on the keyword that is provided in the URL endpoint.as a summery this API code is a RESTful API that accepts GET requests to search for facilities by keyword.
  
      app = Flask(__name__,template_folder = 'docs')
- 
-  # Create object to control SQLAlchemy from the Flask app   or  Defining SQLAlchemy Models
-  
-  ![2](https://user-images.githubusercontent.com/126191930/221657919-1b78d8ae-be8c-44b3-9c20-1b084c3e776e.png)
 
  # Searching for Facilities with GET Requests
  
  The application has two tables for facilities represented by points and polygons. Each table has different columns to store the properties of the facilities, such as name, address, phone number, email, and website. The tables also contain a column for storing the geographic data in the GeoJSON format.
  
  The search function is defined with a route /search/<keyword> that takes a keyword as a parameter. It first tries to search for information based on the category of the facility in the polygon table. If no results are found, it searches for information based on the name of the facility in the polygon table. If still no results are found, it searches for information based on the category of the facility in the point table. Finally, if no results are found, it searches for information based on the name of the facility in the point table.
-     
-
-              
+             
 
   # Creating GeoJSON Features for Facilities
  
@@ -92,7 +86,7 @@ so we have two main function:
  
  The results are returned in a GeoJSON format with the properties of the facilities such as name, address, phone number, email, and website. If the facility is represented by a point, the opening hours are also returned.
      
-    ![5](https://user-images.githubusercontent.com/126191930/221659087-67c73ff7-a229-4643-9a63-7f468b38fa0f.png)
+![5](https://user-images.githubusercontent.com/126191930/221659087-67c73ff7-a229-4643-9a63-7f468b38fa0f.png)
 
 # How can I run Lisbon Search Engine?
     
