@@ -107,12 +107,11 @@ The last API functions are related to get information from the database, but ins
           
 # Limitations and next steps
           
-  - The tool require to the next step that every facility has more than one geometry in different scales to have a better visualization.        
-  - Displaying the results of Lisbon Search Engine It will be more accurate if it is done from a official web page.        
-  - The source of information was limited. it will useful for the project include more informetion sources.
-  - The next tool version will seek the implementation of more information about Lisbon and increase the number of OSM tags to achieve a good range of detail.
-          
-     
+- The tool requires the next step that every facility has more than one geometry in different scales to have a better visualization.
+- Displaying the results of Lisbon Search Engine It will be more accurate if it is done from an official web page.
+- The source of information was limited. it will use for the project to include more information sources.
+- The next tool version will seek the implementation of more information about Lisbon and increase the number of OSM tags to achieve a good range of detail.
+             
 # Authors
 
  Afsaneh Rasoulian Bachelor´s degree in Surveying Engineering
