@@ -16,8 +16,8 @@ DB_CONFIG = {
     "database": "programming_project",
     "username": "postgres",
     "password": "postgres",
-    "host": "localhost",
-    "port": "5433"}
+    "host": "34.79.229.205",
+    "port": "5432"}
 
 # Notice, normally this is set with environment variables on the server
 # machine do avoid exposing the credentials. Something like
@@ -41,7 +41,7 @@ database_uri = f"postgresql://{username}:{password}@{host}:{port}/{database}"
 
 # Create object to control SQLAlchemy from the Flask app
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost:5433/programming_project'
+app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
 db = SQLAlchemy(app)
 engine = create_engine(app.config['SQLALCHEMY_DATABASE_URI'])
 Session = sessionmaker(bind=engine)
