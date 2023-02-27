@@ -13,6 +13,9 @@ To reach the main objective of Lisbon Search Engine the data was extract from Op
 
 The facilities chosen were divided into two categories, depending of which geometry were thought to display on the map. For example, facilities who have a big dimension on field (Hospitals, Universities, Schools) will be displayed on the map using polygon geometries from OSM. In other hand, facilities which dimension are not too big were displayed as point geometries. The geometric transformations were done in the [ETL script](https://github.com/ProgrammingCourse2023/Lisbon_Search_Engine/blob/main/ETL/functions.py).
 
+![WhatsApp Image 2023-02-26 at 18 25 37](https://user-images.githubusercontent.com/126191930/221629647-1527a6b5-0e10-4295-9aad-0d8054aa68ae.jpeg)
+
+
 # Database
 The database project "programming_ project" was created through the use of PGadmin and we used the extension PostGIS to work with the geometries inside the tables. The tables and views used on ETL and API scripts were created using SQL scripts that are inside the [database folder](https://github.com/ProgrammingCourse2023/Lisbon_Search_Engine/tree/main/DB) to run it in sequencial order. The database has one table and one view per geometry. For example, "facilities_point" as the table and "facilities_point_geojson" as the view
 
