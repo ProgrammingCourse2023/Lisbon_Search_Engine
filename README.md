@@ -70,7 +70,7 @@ https://user-images.githubusercontent.com/126191930/221422672-94b57a01-3cb4-4c95
  The search function is defined with a route /search/<keyword> that takes a keyword as a parameter. It first tries to search for information based on the category of the facility in the polygon table. If no results are found, it searches for information based on the name of the facility in the polygon table. If still no results are found, it searches for information based on the category of the facility in the point table. Finally, if no results are found, it searches for information based on the name of the facility in the point table.
              
 
-  # Creating GeoJSON Features for Facilities
+ # Creating GeoJSON Features for Facilities
  
  The API code has two SQLAlchemy models: facilities_polygon and facilities_point. These models represent tables in the PostgreSQL database that store facilities data.
  The search function in your API code uses the psycopg2 library to execute SQL queries against the PostgreSQL database to search for facilities. The function accepts a keyword parameter, which is the search term entered by the user. The function first searches for facilities that match the facility field in the facilities_polygon table. If no matches are found, the function searches for facilities that match the name field in the facilities_polygon table. If no matches are found, the function searches for facilities that match the facility field in the facilities_point table. Finally, if no matches are found, the function searches for facilities that match the name field in the facilities_point table.
@@ -82,7 +82,7 @@ so we have two main function:
      
 ![4](https://user-images.githubusercontent.com/126191930/221658483-cc094952-55b5-456c-9a39-d924d204458b.png)
 
-   # Returning JSON Response to User
+# Returning JSON Response to User
  
  The results are returned in a GeoJSON format with the properties of the facilities such as name, address, phone number, email, and website. If the facility is represented by a point, the opening hours are also returned.
      
@@ -135,8 +135,20 @@ https://user-images.githubusercontent.com/126191930/221424269-1a5f7bb5-a63e-43c6
           
 The API also has two functions to the user get all the information about facilities stored in the database at the same time. Only need to write, after the localhost, "facilities_polygon", if the facility is stored in the polygon table, or "facilities_point" if the facility is stored in the point table. The video below shows an example of this application.----
 
-          
+
+    
+
+https://user-images.githubusercontent.com/126191930/221660981-be63ade2-a073-47a3-8e71-e290f33c2ed5.mp4
+
+      
 The last API functions are related to get information from the database, but instead of get all information in the same time it will get a single register, considering some id of the register. Only need to write, after the localhost, "facilities_polygon/<id>", if the facility is stored in the polygon table, or "facilities_point/<id>" if the facility is stored in the point table. The video below shows an example of this application.----
+ 
+
+https://user-images.githubusercontent.com/126191930/221661715-7df43a10-d5f3-4937-befc-02830b41c5fa.mp4
+
+
+       
+          
           
 Authors
 
