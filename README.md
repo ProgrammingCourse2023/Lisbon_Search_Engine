@@ -6,7 +6,6 @@ The development of this tool was possible due to the creation of the ETL to do t
 
 The objective of the tool is allow to the user select specific facilities located in the city of Lisbon and display their main information such as name, address, email, phone, website, among others.----
 
-The developers of this tool are: Afsanea, Mônica Sofia and Gabriel
 
 # Data
 
@@ -102,3 +101,8 @@ The API also has two functions to the user get all the information about facilit
           
 The last API functions are related to get information from the database, but instead of get all information in the same time it will get a single register, considering some id of the register. Only need to write, after the localhost, "facilities_polygon/<id>", if the facility is stored in the polygon table, or "facilities_point/<id>" if the facility is stored in the point table. The video below shows an example of this application.----
           
+Authors
+
+ Afsaneh Rasoulian  
+ Gabriel Duarte
+ Mónica Sofía Roncancio
