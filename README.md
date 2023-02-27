@@ -157,6 +157,13 @@ The last API functions are related to get information from the database, but ins
 
 https://user-images.githubusercontent.com/126191930/221661715-7df43a10-d5f3-4937-befc-02830b41c5fa.mp4
           
+
+# Limitations and next steps
+          
+ - Expand the range of OSM tags in the next version of Lisbon Search Engine to improve the detail level in the search.
+ - Displaying the information in the official web page of Lisbon Search Engine in the next stage of thhe project.
+ 
+          
          
           
 # Authors
