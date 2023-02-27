@@ -17,8 +17,7 @@ The facilities chosen were divided into two categories, depending of which geome
 
 
 # Database
-The database project "programming_ project" was created through the use of PGadmin and we used the extension PostGIS to work with the geometries inside the tables.
-The tables and views used on ETL and API scripts were created using SQL scripts that are inside the [database folder](https://github.com/ProgrammingCourse2023/Lisbon_Search_Engine/tree/main/DB) to run it in sequencial order. The database has one table and one view per geometry. For example, "facilities_point" as the table and "facilities_point_geojson" as the view
+The database project "programming_ project" was created through the use of PGadmin and we used the extension PostGIS to work with the geometries inside the tables. The tables and views used on ETL and API scripts were created using SQL scripts that are inside the [database folder](https://github.com/ProgrammingCourse2023/Lisbon_Search_Engine/tree/main/DB) to run it in sequencial order. The database has one table and one view per geometry. For example, "facilities_point" as the table and "facilities_point_geojson" as the view
 
 # ETL
 The extraction of the information from Open Street Map was possible using the "geometries_from_place()" inside the OSM package, where "group" are the OSM main classification (amenity, building) and "values" are the facilities (hospital, library, school, etc). Also, it was setting the "location" query, which represents the name of a city, region or country. As aim of the project was defined "Lisbon" as the location query, but other places can be chosen as well. The code below shows how the OSM tool works
@@ -49,6 +48,64 @@ https://user-images.githubusercontent.com/126191930/221422672-94b57a01-3cb4-4c95
 
 
 # API
+
+  #Setting Up the Database
+ 
+ First, we need to create a database for our API. The database used in my API code is PostgreSQL. The connection information for the database is specified in a dictionary called #DB_CONFIG.We will be using PostgreSQL for this example, but you can use any database of your choice. 
+ 
+      DB_CONFIG = {
+    "database": "programming_project",
+    "username": "postgres",
+    "password": "postgres",
+    "host": "localhost",
+    "port": "5433"}
+           ![final_change - Copy](https://user-images.githubusercontent.com/126191930/221654799-e58c3735-b435-4d1c-b597-2484ed83a13c.png)
+
+           
+           
+ #Building the API with Flask
+ 
+ Our API code is built using Flask, a web framework for Python that allows developers to build web applications quickly and easily.
+ this Flask web application searches information from two tables in a PostgreSQL database. The database contains information on different types of facilities such as shops, schools, hospitals, and banks etc. The application searches for information based on the keyword that is provided in the URL endpoint.as a summery this API code is a RESTful API that accepts GET requests to search for facilities by keyword.
+ 
+
+ 
+ # Create a flask application
+ ......
+ 
+ #Connecting to PostgreSQL Database
+ ....
+ 
+ #Searching for Facilities with GET Requests
+ 
+ The application has two tables for facilities represented by points and polygons. Each table has different columns to store the properties of the facilities, such as name, address, phone number, email, and website. The tables also contain a column for storing the geographic data in the GeoJSON format.
+ 
+ # Create object to control SQLAlchemy from the Flask app   or  Defining SQLAlchemy Models
+ .....
+ 
+ #Searching for Facilities with GET Requests  or #Executing SQL Queries with psycopg2
+ 
+ The search function is defined with a route /search/<keyword> that takes a keyword as a parameter. It first tries to search for information based on the category of the facility in the polygon table. If no results are found, it searches for information based on the name of the facility in the polygon table. If still no results are found, it searches for information based on the category of the facility in the point table. Finally, if no results are found, it searches for information based on the name of the facility in the point table.
+ 
+           conn = psycopg2.connect(dbname=DB_CONFIG['database'],
+              user=DB_CONFIG['username'],
+              password=DB_CONFIG['password'],
+              host=DB_CONFIG['host'],
+              port=DB_CONFIG['port'])
+              
+              
+#Creating GeoJSON Features for Facilities
+ 
+ The API code has two SQLAlchemy models: facilities_polygon and facilities_point. These models represent tables in the PostgreSQL database that store facilities data.
+ 
+ The search function in your API code uses the psycopg2 library to execute SQL queries against the PostgreSQL database to search for facilities. The function accepts a keyword parameter, which is the search term entered by the user. The function first searches for facilities that match the facility field in the facilities_polygon table. If no matches are found, the function searches for facilities that match the name field in the facilities_polygon table. If no matches are found, the function searches for facilities that match the facility field in the facilities_point table. Finally, if no matches are found, the function searches for facilities that match the name field in the facilities_point table.
+  
+ If a match is found for a facility, the function creates a GeoJSON Feature for that facility and adds it to a GeoJSON FeatureCollection. The GeoJSON Feature contains information about the facility, such as its name, address, phone number, email, and website. 
+Once the GeoJSON FeatureCollection is complete, the function returns it as a JSON response to the user.
+
+   #Returning JSON Response to User
+ 
+ The results are returned in a GeoJSON format with the properties of the facilities such as name, address, phone number, email, and website. If the facility is represented by a point, the opening hours are also returned.
 
 In the API part some functions were develop to the user get:
 - a search connected with the front-end to show the results in a map 
@@ -105,17 +162,8 @@ The API also has two functions to the user get all the information about facilit
           
 The last API functions are related to get information from the database, but instead of get all information in the same time it will get a single register, considering some id of the register. Only need to write, after the localhost, "facilities_polygon/<id>", if the facility is stored in the polygon table, or "facilities_point/<id>" if the facility is stored in the point table. The video below shows an example of this application.----
           
-# Limitations and next steps
-          
-- The tool requires the next step that every facility has more than one geometry in different scales to have a better visualization.
-- Displaying the results of Lisbon Search Engine It will be more accurate if it is done from an official web page.
-- The source of information was limited. it will use for the project to include more information sources.
-- The next tool version will seek the implementation of more information about Lisbon and increase the number of OSM tags to achieve a good range of detail.
-             
-# Authors
+Authors
 
- Afsaneh Rasoulian Bachelor´s degree in Surveying Engineering
-          
- Gabriel Duarte Bachelos´s degree in Geography
-          
- Mónica Sofía Roncancio Bachelos´s degree in Surveying Engeneering
+ Afsaneh Rasoulian  
+ Gabriel Duarte
+ Mónica Sofía Roncancio
