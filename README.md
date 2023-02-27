@@ -108,5 +108,7 @@ The last API functions are related to get information from the database, but ins
 # Authors
 
  Afsaneh Rasoulian Bachelor´s degree in Surveying Engineering
+          
  Gabriel Duarte Bachelos´s degree in Geography
+          
  Mónica Sofía Roncancio Bachelos´s degree in Surveying Engeneering
