@@ -149,11 +149,10 @@ The last API functions are related to get information from the database, but ins
  
 
 https://user-images.githubusercontent.com/126191930/221661715-7df43a10-d5f3-4937-befc-02830b41c5fa.mp4
-
+         
           
-          
-Authors
+# Authors
 
- Afsaneh Rasoulian  
- Gabriel Duarte
- Mónica Sofía Roncancio
+ Afsaneh Rasoulian, Bachelor´s degree in Surveyor Engineering
+ Gabriel Duarte, Bachelor´s degree in Geography
+ Mónica Sofía Roncancio, Bachelor´s degree in Surveyor Engineering
