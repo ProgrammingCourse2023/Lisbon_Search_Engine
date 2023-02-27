@@ -21,7 +21,7 @@ If you need to add more class of amenity or building, you can edit the list usin
 """
 USERNAME = 'postgres'
 PASSWORD = 'postgres'
-HOST = 'localhost'
+HOST = '34.79.229.205'
 PORT = 5432
 DB = 'programming_project'
 AMENITY_LIST_POINT = ['library','clinic','pharmacy','nightclub','bank','theatre','police','post_office']
