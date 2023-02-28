@@ -14,7 +14,7 @@ The objective of the tool is allow to the user select specific facilities locate
 
 # Data
 
-To reach the main objective of Lisbon Search Engine the data was extract from Open Street Map (OSM), the tool aim displaying the most usual facilities due to the users are continuously searching this information. This choice is taken as part of first version of the tool; however, for future versions will be included other primary features OSM classification.
+To reach the main objective of Lisbon Search Engine the data was extract from Open Street Map (OSM), the tool aimS to display the most usual facilities due to the users are continuously searching for this information. This choice is taken as part of the first version of the tool; however, future versions will be included other primary features OSM classification.
 
 The facilities chosen were divided into two categories, depending of which geometry were thought to display on the map. For example, facilities who have a big dimension on field (Hospitals, Universities, Schools) will be displayed on the map using polygon geometries from OSM. In other hand, facilities which dimension are not too big were displayed as point geometries. The geometric transformations were done in the [ETL script](https://github.com/ProgrammingCourse2023/Lisbon_Search_Engine/blob/main/ETL/functions.py).
 
