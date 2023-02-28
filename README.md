@@ -54,7 +54,7 @@ https://user-images.githubusercontent.com/126191930/221422672-94b57a01-3cb4-4c95
 
 # API
 
-  # Setting Up the Database
+  ### Setting Up the Database
  
  First, we need to create a database for our API. The database used in my API code is PostgreSQL. The connection information for the database is specified in a dictionary called #DB_CONFIG.We will be using PostgreSQL for this example, but you can use any database of your choice. 
  
